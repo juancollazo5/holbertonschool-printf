@@ -1,0 +1,44 @@
+.TH _PRINTF 3 _printf\-0.1
+.SH NAME
+_printf - formatted output
+.SH SYNOPSIS
+.B #include\ "main.h"
+
+.B int _printf(const char
+*format, ...);
+.SH EXAMPLES OF PRINT FUNCTION
+
+_printf("Hello, Holberton\n") prints "Hello, Holberton", followed by a new line
+
+_printf("%s", "Hello") prints "Hello"
+
+_printf("This is a number: %d", 98) prints "This is a number: 98"
+ 
+.P
+.SH COMPILE
+ gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format *.c
+.SH DESCRIPTION
+The function _printf() produces output to standard output in order of arguments given. Should it be give a format specifier, it will print as described below:
+.TP
+.B %d
+prints intergers
+.TP
+.B %i
+prints unsigned intergers
+.TP
+.B %c
+prints characters
+.TP
+.B %s
+prints a string
+.TP
+.B %
+prints "%"
+.SH SEE ALSO
+ \fBprintf(3), fprintf(3), sprintf(3), vprintf(3).\fR
+.SH RETURN
+ Returns number of times printed.
+.SH BUGS
+ No bugs found as of yet.
+.SH AUTHOR
+ Osvaldo Antompietri & Juan Collazo
