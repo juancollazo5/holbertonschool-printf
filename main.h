@@ -11,4 +11,5 @@ int _printf(const char *format, ...);
 void s_case(va_list args, int *count);
 void c_case(va_list args, int *count);
 int _strlen(char *s);
+int _print_int(int n);
 #endif
