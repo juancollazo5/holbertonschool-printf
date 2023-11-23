@@ -6,16 +6,19 @@
  */
 void s_case(va_list args, int *count)
 {
-	char *ptr;
+    char *ptr;
 
-	ptr = va_arg(args, char *);
-	if (ptr == NULL)
-	{
-		write(1, "(null)", 6);
-		*count += 6;
-	}
-		write(1, ptr, _strlen(ptr));
-		*count += _strlen(ptr);
+    ptr = va_arg(args, char *);
+    if (ptr == NULL)
+    {
+        write(1, "(null)", 6);
+        *count += 6;
+    }
+    else
+    {
+        write(1, ptr, _strlen(ptr));
+        *count += _strlen(ptr);
+    }
 }
 
 /**
@@ -25,12 +28,13 @@ void s_case(va_list args, int *count)
  */
 void c_case(va_list args, int *count)
 {
-	char *ptr;
+    char ch;
 
-	ptr = va_arg(args, char *);
-	write(1, &ptr, 1);
-	*count += 1;
+    ch = va_arg(args, int);
+    write(1, &ch, 1);
+    *count += 1;
 }
+
 
 /**
  *_strlen - entry point
@@ -39,12 +43,12 @@ void c_case(va_list args, int *count)
  */
 int _strlen(char *s)
 {
-	int str = 0;
+    int str = 0;
 
-	while (s[str] != '\0')
-	{
-		str++;
-	}
+    while (s[str] != '\0')
+    {
+        str++;
+    }
 
-	return (str);
+    return (str);
 }
