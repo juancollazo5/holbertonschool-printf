@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- *s_case - function that print a string 
- *@args: the arguments 
+ *s_case - function that print a string
+ *@args: the arguments
  *@count: count the string length
  */
 void s_case(va_list args, int *count)
