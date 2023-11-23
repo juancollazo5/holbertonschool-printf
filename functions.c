@@ -31,3 +31,20 @@ void c_case(va_list args, int *count)
 	write(1, &ptr, 1);
 	*count += 1;
 }
+
+/**
+ *_strlen - entry point
+ *@s: value pointer
+ * Return: str
+ */
+int _strlen(char *s)
+{
+	int str = 0;
+
+	while (s[str] != '\0')
+	{
+		str++;
+	}
+
+	return (str);
+}
