@@ -11,4 +11,9 @@ int _printf(const char *format, ...);
 void s_case(va_list args, int *count);
 void c_case(va_list args, int *count);
 int _strlen(char *s);
+int _print_int(int n);
+int _print_octal(unsigned int n);
+int _print_hex_digit(int digit, int uppercase);
+int _print_hex(unsigned int n, int uppercase);
+int _print_ptr(void *ptr);
 #endif
