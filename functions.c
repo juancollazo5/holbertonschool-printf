@@ -54,6 +54,37 @@ int _strlen(char *s)
 }
 
 /**
+ * _print_unsigned - Print an unsigned integer.
+ * @n: The unsigned integer to be printed.
+ *
+ * Return: The number of characters printed.
+ */
+int _print_unsigned(unsigned int n)
+{
+    int i = 0, j;
+    char buffer[20];
+
+    if (n == 0)
+    {
+        write(1, "0", 1);
+        return 1;
+    }
+
+    while (n != 0)
+    {
+        buffer[i++] = n % 10 + '0';
+        n /= 10;
+    }
+
+    for (j = i - 1; j >= 0; j--)
+    {
+        write(1, &buffer[j], 1);
+    }
+
+    return i;
+}
+
+/**
  * _print_octal - Prints an unsigned integer in octal format
  * @n: The unsigned integer to be printed
  * Return: The number of characters printed
