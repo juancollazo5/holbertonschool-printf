@@ -34,10 +34,10 @@ int _printf(const char *format, ...)
                 break;
 
             case 'd': /* case of an integer */
-	    case 'i':
                 count += _print_int(va_arg(args, int));
                 break;
 
+	    case 'i':
             case 'u': /* case of an unsigned integer */
                 count +=  _print_unsigned(va_arg(args, unsigned int));
                 break;
